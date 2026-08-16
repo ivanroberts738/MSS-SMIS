@@ -1,0 +1,6 @@
+{
+  "name": "Masaba Secondary School SMIS",
+  "description": "School Management Information System for Masaba Secondary School Budadiri, covering O-Level and A-Level academics, teacher subject/class allocations, report cards, fees, attendance, discipline, timetable, inventory, and administration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

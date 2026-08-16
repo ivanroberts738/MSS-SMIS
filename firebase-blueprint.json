@@ -1,0 +1,190 @@
+{
+  "entities": {
+    "Teacher": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "email": { "type": "string" }
+      }
+    },
+    "Student": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "admissionNo": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" }
+      }
+    },
+    "MarkRecord": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "subjectId": { "type": "string" },
+        "totalMark": { "type": "number" }
+      }
+    },
+    "AttendanceRecord": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "date": { "type": "string" }
+      }
+    },
+    "ClassStream": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "className": { "type": "string" },
+        "streamName": { "type": "string" }
+      }
+    },
+    "Subject": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "AuditLog": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "action": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    },
+    "ExamSchedule": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "IncidentRecord": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "LibraryBook": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "InventoryItem": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "itemName": { "type": "string" }
+      }
+    },
+    "Announcement": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "SchoolEvent": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "SchoolDocument": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "UserAccount": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" }
+      }
+    },
+    "NotificationItem": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" }
+      }
+    },
+    "SchoolSettings": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "schoolName": { "type": "string" },
+        "academicYear": { "type": "string" },
+        "currentTerm": { "type": "string" }
+      }
+    },
+    "FeePayment": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "amountPaid": { "type": "number" },
+        "receiptNo": { "type": "string" }
+      }
+    },
+    "SubjectCombination": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "TeacherAssignment": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "teacherId": { "type": "string" },
+        "teacherName": { "type": "string" },
+        "subjectId": { "type": "string" },
+        "subjectCode": { "type": "string" },
+        "subjectName": { "type": "string" },
+        "className": { "type": "string" },
+        "stream": { "type": "string" },
+        "level": { "type": "string" },
+        "academicYear": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/teachers/{teacherId}": { "schema": "Teacher" },
+    "/teacherAssignments/{assignmentId}": { "schema": "TeacherAssignment" },
+    "/students/{studentId}": { "schema": "Student" },
+    "/marks/{markId}": { "schema": "MarkRecord" },
+    "/attendance/{attendanceId}": { "schema": "AttendanceRecord" },
+    "/classes/{classId}": { "schema": "ClassStream" },
+    "/subjects/{subjectId}": { "schema": "Subject" },
+    "/auditLogs/{logId}": { "schema": "AuditLog" },
+    "/exams/{examId}": { "schema": "ExamSchedule" },
+    "/incidents/{incidentId}": { "schema": "IncidentRecord" },
+    "/books/{bookId}": { "schema": "LibraryBook" },
+    "/inventory/{inventoryId}": { "schema": "InventoryItem" },
+    "/announcements/{announcementId}": { "schema": "Announcement" },
+    "/events/{eventId}": { "schema": "SchoolEvent" },
+    "/documents/{documentId}": { "schema": "SchoolDocument" },
+    "/users/{userId}": { "schema": "UserAccount" },
+    "/notifications/{notificationId}": { "schema": "NotificationItem" },
+    "/settings/{settingId}": { "schema": "SchoolSettings" },
+    "/payments/{paymentId}": { "schema": "FeePayment" },
+    "/combinations/{combinationId}": { "schema": "SubjectCombination" }
+  }
+}

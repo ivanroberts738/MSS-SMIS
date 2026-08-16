@@ -1,0 +1,90 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    match /students/{studentId} {
+      allow read, write: if true;
+    }
+
+    match /teachers/{teacherId} {
+      allow read, write: if true;
+    }
+
+    match /teacherAssignments/{assignmentId} {
+      allow read, write: if true;
+    }
+
+    match /marks/{markId} {
+      allow read, write: if true;
+    }
+
+    match /attendance/{attendanceId} {
+      allow read, write: if true;
+    }
+
+    match /classes/{classId} {
+      allow read, write: if true;
+    }
+
+    match /subjects/{subjectId} {
+      allow read, write: if true;
+    }
+
+    match /auditLogs/{logId} {
+      allow read, write: if true;
+    }
+
+    match /exams/{examId} {
+      allow read, write: if true;
+    }
+
+    match /incidents/{incidentId} {
+      allow read, write: if true;
+    }
+
+    match /books/{bookId} {
+      allow read, write: if true;
+    }
+
+    match /inventory/{inventoryId} {
+      allow read, write: if true;
+    }
+
+    match /announcements/{announcementId} {
+      allow read, write: if true;
+    }
+
+    match /events/{eventId} {
+      allow read, write: if true;
+    }
+
+    match /documents/{documentId} {
+      allow read, write: if true;
+    }
+
+    match /notifications/{notificationId} {
+      allow read, write: if true;
+    }
+
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+
+    match /fees/{feeId} {
+      allow read, write: if true;
+    }
+
+    match /combinations/{combId} {
+      allow read, write: if true;
+    }
+
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
